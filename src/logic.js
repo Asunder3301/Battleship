@@ -127,5 +127,15 @@ class Gameboard {
 }
 
 class Player {
+    constructor(name = "Player", p2, computer = false) {
+        this.name = name;
+        this.p2 = p2;
+        this.computer = computer;
+    }
 
+    sendAttack(opponent, attackPosition) {
+        return opponent.board.receiveAttack(attackPosition);
+    }
+
+    board = new Gameboard();
 }

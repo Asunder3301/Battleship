@@ -55,3 +55,4 @@ test("ship not hit", () => {
     board.placeShip(3, [0, 2], true);
     expect(board.receiveAttack([0, 3])).toBe(false);
 })
+
