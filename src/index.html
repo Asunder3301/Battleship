@@ -1,11 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Battleship</title>
+	</head>
+	<header>Battleship</header>
+	<body>
+		<section class="content">
+			<div>
+				<div class="name" id="playerName"></div>
+				<div class="gameboard" id="player"></div>
+				<div class="message" id="message1"></div>
+			</div>
+			<div class="middle-row">
+				<div class="orientation">
+					<img src="./icons/change.svg" alt="change orientation" />
+				</div>
+				<div class="turn">Bob's turn</div>
+				<button class="place">Done</button>
+			</div>
+			<div>
+				<div class="name" id="opponentName"></div>
+				<div class="gameboard" id="opponent"></div>
+				<div class="message" id="message2"></div>
+			</div>
+		</section>
+		<dialog class="start-modal">
+			<form class="start-form" action="events.js" method="post">
+				<label for="name1-text">Player 1 Name</label>
+				<input type="text" name="p1Name" id="name1-text" />
+				<label for="name2-text">Player 2 Name</label>
+				<input type="text" name="p2Name" id="name2-text" />
+				<div class="checkbox-container">
+					<label for="isAI-checkbox">Player 2 AI</label>
+					<input type="checkbox" name="p2AI" id="isAI-checkbox" />
+				</div>
+				<button type="submit">START</button>
+			</form>
+		</dialog>
+	</body>
 </html>
